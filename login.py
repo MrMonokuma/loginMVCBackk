@@ -1,7 +1,7 @@
 import mysql.connector
 from mysql.connector import errorcode
-from DAO.UsuariosDao import UsuariosDao
-from DAO.models import Usuario
+from UsuariosDao import UsuariosDao
+from models import Usuario
 import json
 import cgi
 import os

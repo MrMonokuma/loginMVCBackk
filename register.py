@@ -1,7 +1,7 @@
 import mysql.connector
 from mysql.connector import errorcode
-from DAO.UsuariosDao import UsuariosDao
-from DAO.models import Usuario
+from UsuariosDao import UsuariosDao
+from models import Usuario
 import json
 import cgi
 import os
@@ -11,7 +11,7 @@ print('')
 
 if os.environ['REQUEST_METHOD']=="POST":
     datos= cgi.FieldStorage()
-    username=datos.getvalue('username')
+    username=datos.getvalue('usuario')
     contraseña=datos.getvalue('contra')
 
     usuario=Usuario(username,contraseña)
